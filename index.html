@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Day 6</title>
+		<style>
+			body{
+				background-color: lightblue;
+			}
+			.notes{
+				display: none;
+			}
+			button{
+				border: 2px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="notes">
+			<p>event.preventDefault() stops default code, eg page refreshing.</p>
+			<p>typeof to find out what something is in js</p>
+			<p>parseInt() change string to number</p>
+		</div>
+
+		<form class="form" action="index.html" method="post">
+			<p>Type something</p>
+			<input type="text" name="input" id="anInput"><br><br>
+			<button id="trigger" type="button" name="button">Triggler</button>
+		</form>
+
+		<p id="input"></p>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				$('#trigger').click(function(){
+					var getValue = document.getElementById('anInput').value;//getting text in input
+					var getNumber = parseInt(getValue); //change to number
+
+					// console.log(typeof getNumber);//checking if number or string
+
+					// if (getValue === 'something'){
+					// 	alert('Hello');
+					// } else {
+					// 	alert('Goodbye');
+					// }
+
+					var trueVal = true;
+					var falseVal = false;
+
+					if (trueVal){
+						console.log("it is true");
+					} else {
+						console.log("it is false");
+					}
+				});
+			})
+
+
+
+			// function Hotel(name, rooms){
+			// 	this.name = name;
+			// 	this.room = rooms;
+			// }
+			//
+			// var hotelOne = new Hotel("Quay", 40);
+			// var hotelTwo = new Hotel("Park", 120);
+			//
+			//
+			//
+			// var a = 'a string';
+			// var myArray = [22,15];
+			//
+			// var person = {
+			// 	firstName: 'John'
+			// };
+			// person.age = 22;
+			// person.lastName = 'Smith';
+			//
+			// delete person.firstName;
+			//
+			// console.log(person);
+			//
+			//
+			// var fruits = ["banana", "orange", "apple", "mango"];
+			// fruits.push("kiwi"); //adds to the end of the array
+			// console.log(fruits);
+
+		</script>
+	</body>
+</html>
