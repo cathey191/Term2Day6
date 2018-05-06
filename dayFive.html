@@ -4,7 +4,12 @@
 		<meta charset="utf-8">
 		<title>Day 5</title>
 		<style>
+			body{
+				background-color: #1e272e;
+			}
 			.casino{
+				/* width: 100vw;
+				height: 100vh; */
 				text-align: center;
 			}
 			h2{
@@ -25,17 +30,23 @@
 		<div class="casino">
 			<h2>Random Number</h2>
 			<p id="info" class="number">Begin</p>
+			<!-- <input type="number" name="numberInput" min="1" max="10"><br><br> -->
 			<button class="newNumber" id="newNumber">New Number</button>
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 		<script>
 
-		$('.newNumber').click(function(){
-			var randomNum = Math.floor((Math.random() * 10) + 1);
-			// $('#info').append('<br />' + randomNum);
-			$('#info').text(randomNum);
-		});
+			$(document).ready(function(){
+
+			});
+
+
+			$('.newNumber').click(function(){
+				var randomNum = Math.floor((Math.random() * 10) + 1);
+				// $('#info').append('<br />' + randomNum);
+				$('#info').text(randomNum);
+			});
 
 		</script>
 	</body>

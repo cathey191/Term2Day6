@@ -20,6 +20,13 @@
 			<p>event.preventDefault() stops default code, eg page refreshing.</p>
 			<p>typeof to find out what something is in js</p>
 			<p>parseInt() change string to number</p>
+
+			<h3>Array</h3>
+			<p>.push('add me') added to the end of an array</p>
+			<p>.pop() removes one from the end of an array</p>
+
+			<h2>Summative Notes</h2>
+			<p>Need an array, for holding information "memory"</p>
 		</div>
 
 		<form class="form" action="index.html" method="post">
@@ -34,8 +41,10 @@
 		<script>
 			$(document).ready(function(){
 
+				var storageArray = [];
+
 				$('#trigger').click(function(){
-					var getValue = document.getElementById('anInput').value;//getting text in input
+					// var getValue = document.getElementById('anInput').value;//getting text in input
 					var getNumber = parseInt(getValue); //change to number
 
 					// console.log(typeof getNumber);//checking if number or string
@@ -46,14 +55,14 @@
 					// 	alert('Goodbye');
 					// }
 
-					var trueVal = true;
-					var falseVal = false;
+					var getValue = document.getElementById('anInput').value;
 
-					if (trueVal){
-						console.log("it is true");
+					if(getValue === 'remove'){
+						storageArray.pop();
 					} else {
-						console.log("it is false");
+						storageArray.push(getValue);
 					}
+					console.log(storageArray)
 				});
 			})
 
@@ -85,6 +94,7 @@
 			//
 			// var fruits = ["banana", "orange", "apple", "mango"];
 			// fruits.push("kiwi"); //adds to the end of the array
+			// fruits.pop();
 			// console.log(fruits);
 
 		</script>
